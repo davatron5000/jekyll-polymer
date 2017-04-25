@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <style>
+    /* Root variables can be used globally */
+    :root {
+      --red: #990000;
+      --green: #009900;
+      --white: #FFFFFF;
+      --pad-lg: 5vmax;
+      --pad-m: 2.5vmax;
+      --pad-s: 1.5em;
+    }
+    html,
+    body {
+      margin:0;
+    }
+    
+    /* Global scope .button, can't be used in web component. 
+    A buttons.css partial would have to be explicitly imported 
+    in the Web Component. (Styles do currentyl pierce the 
+    Shadow DOM in Edge it seems) */
+    .button {
+      background: var(--green);
+      color: var(--white);
+    }
+  </style>
+  <!-- component -->
+  <link rel="import" href="/components/site-navigation.html"/>
+
+</head>
+<body>
+  <site-navigation></site-navigation>
+  {{ content }}
+</body>
+</html>

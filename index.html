@@ -1,0 +1,18 @@
+---
+layout: default
+title: Home
+---
+
+<link rel="import" href="/components/site-container.html" />
+<link rel="import" href="/components/features-list.html" />
+<link rel="import" href="/components/feature-item.html" />
+
+<site-container>
+      <features-list>
+            <!-- The thought here is these would and could be generated
+                 server-side. It's just fill in the blanks. -->
+            {% for feature in site.data.features %}
+            <feature-item title="{{feature.title}}" price="${{feature.price}}" description="{{feature.description}}"></feature-item>
+            {% endfor %}
+      </features-list>
+</site-container>

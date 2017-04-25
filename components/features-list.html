@@ -1,0 +1,28 @@
+<link rel="import"  href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="features-list">
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+      :host {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+        grid-gap: 3vw;
+        margin: var(--pad-lg) auto;
+      }
+    </style>
+    <slot></slot>
+  </template>
+
+  <script>
+    class FeaturesList extends Polymer.Element {
+      static get is() { return "features-list"; }
+      constructor() {
+        super();
+      }
+
+    }
+    customElements.define(FeaturesList.is, FeaturesList);
+  </script>
+
+</dom-module>

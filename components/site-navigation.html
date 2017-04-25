@@ -1,0 +1,30 @@
+<link rel="import"  href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="site-navigation">
+  <template>
+    <style>
+      :host {
+        background-color: #FF0000;
+        color: white;
+        display: block;
+        padding: 0.5em;
+        text-align: right;
+      }
+    </style>
+    Hi, <b>{{currentuser}}</b>!
+  </template>
+  
+  <script>
+    class SiteNavigation extends Polymer.Element {
+      static get is() { return "site-navigation"; }
+      
+      // set this element's owner property
+      constructor() {
+        super();
+        this.currentuser = "Reagan";
+      }
+    }
+    
+    customElements.define(SiteNavigation.is, SiteNavigation);
+  </script>
+</dom-module>

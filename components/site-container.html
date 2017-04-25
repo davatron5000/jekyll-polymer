@@ -1,0 +1,27 @@
+<link rel="import"  href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="site-container">
+  <template>
+    <style>
+      :host {
+        max-width: 1200px;
+        margin: auto;
+        width: 95%;
+        display: block;
+      }
+
+      :host(.wide) {
+        max-width: 1600px;
+      }
+    </style>
+    <slot></slot>
+  </template>
+
+  <script>
+    class SiteContainer extends Polymer.Element {
+      static get is() { return "site-container"; }
+    }
+    customElements.define(SiteContainer.is, SiteContainer);
+  </script>
+
+</dom-module>
